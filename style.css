@@ -1,0 +1,28 @@
+body {
+    background-color: #f6e1e1;
+    font-family: genica, sans-serif;
+    font-style: normal;
+    font-weight: 800;
+}
+
+header h1 {
+    color: #a1d4ee;
+    font-size: 200px;
+    margin-bottom: 10px;
+}
+
+header h3, footer h3 {
+    color: #b5e1e4;
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.main_label {
+    color: #ef8fab;
+    font-size:50px;
+}
+
+footer{
+    padding: 20px;
+    width: 100%;
+}

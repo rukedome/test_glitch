@@ -1,0 +1,111 @@
+body {
+    background-color: #D3ECFF;
+}
+
+#container {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.letter {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 30px;
+}
+
+.cell {
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
+  margin-bottom: 3px;
+}
+
+.pos-absolute {
+  position: absolute;
+}
+
+.h {
+  width: 120px;
+}
+
+.a {
+  width: 150px;
+}
+
+.a-row2-1 {
+  top: 33px;
+  left: 190px;;
+}
+
+.a-row2-2 {
+  top: 33px;
+  left: 230px;
+}
+
+.a-row4-1 {
+  top: 96px;
+  left: 165px;
+}
+
+.a-row4-2 {
+  top: 96px;
+  left: 255px;
+}
+
+.p {
+  width: 90px;
+}
+
+.p-row1-1 {
+  top: 12px;
+  left: 380px;
+}
+
+.p-row2-1 {
+  top: 53px;
+  left: 380px;
+}
+
+.p2-row1-1 {
+  top: 12px;
+  left: 500px;
+}
+
+.p2-row2-1 {
+  top: 53px;
+  left: 500px;
+}
+
+.y {
+    width: 150px;
+}
+
+.y-row1-1 {
+  left: 580px;
+}
+
+.y-row1-2 {
+  left: 680px;
+}
+
+.y-row2-1 {
+  top: 33px;
+  left: 600px;
+}
+
+.y-row2-2 {
+  top: 33px;
+  left: 660px;
+}
+
+.fill {
+  background-color: #67ACEB;
+  transition: border-radius 0.3s linear;
+}
+
+#container:hover .fill {
+  border-radius: 20px;
+}
