@@ -1,0 +1,41 @@
+@import url(https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap);
+
+
+body {
+  background-color:#d3ecff;
+}
+
+.container {
+  width: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.title {
+  font-family: "Baskervville", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 90px;
+}
+
+.author {
+  font-size: 15px;
+}
+
+#poem {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 26px;
+  position: relative;
+  margin: 25px 0;
+  padding-left: 40px;
+}
+
+span {
+  font-family: "Merienda", cursive;
+  color: #1580c9;
+}
