@@ -157,8 +157,8 @@ h1+p {
   }
 
   &.book6 {
-    width: 10rem;
-    height: 2.5rem;
+    /* width: 10rem;
+    height: 2.5rem; */
     transform: rotate(-90deg) translate(-11.6rem, 3rem);
     transform-origin: 0;
     color: #1b5d0a;
