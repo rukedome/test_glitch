@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Project2</title>
+  <style>
+    body {
+      background-color: rgb(236, 244, 224);
+      overflow: hidden;
+      height: 100vh;
+    }
+
+    #container {
+      display: flex;
+    }
+
+    #left-container {
+      flex: 1;
+    }
+
+    #center-container {
+      flex: 3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .machine-frame {
+      position: relative;
+    }
+
+    .img-item {
+      position: relative;
+    }
+
+    .ball-frame {
+      position: absolute;
+      top: 55%;
+      left: 63%;
+      display: flex;
+      flex-wrap: wrap;
+      z-index: 1;
+    }
+
+    .ball-frame img {
+      width: 50px;
+      height: 50px;
+      margin: 5px;
+      position: absolute;
+      top: calc(50% - 100px);
+      left: calc(50% - 100px);
+      transform: translate(
+        calc(-100px + 200px * var(--rand-x)),
+        calc(-100px + 200px * var(--rand-y))
+      );
+    }
+
+    .ball-frame img:nth-child(1) { --rand-x: 0.2; --rand-y: 0.3; }
+    .ball-frame img:nth-child(2) { --rand-x: 0.7; --rand-y: 0.5; }
+    .ball-frame img:nth-child(3) { --rand-x: 0.4; --rand-y: 0.65; }
+    .ball-frame img:nth-child(4) { --rand-x: 0.6; --rand-y: 0.4; }
+    .ball-frame img:nth-child(5) { --rand-x: 0.9; --rand-y: 0.65; }
+    .ball-frame img:nth-child(6) { --rand-x: 0.9; --rand-y: 0.5; }
+    .ball-frame img:nth-child(7) { --rand-x: 0.1; --rand-y: 0.65; }
+    .ball-frame img:nth-child(8) { --rand-x: 0.7; --rand-y: 0.65; }
+    .ball-frame img:nth-child(9) { --rand-x: 0.25; --rand-y: 0.65; }
+    .ball-frame img:nth-child(10) { --rand-x: 0.3; --rand-y: 0.5; }
+    .ball-frame img:nth-child(11) { --rand-x: 0.5; --rand-y: 0.6; }
+    .ball-frame img:nth-child(12) { --rand-x: 0.1; --rand-y: 0.45; }
+    .ball-frame img:nth-child(13) { --rand-x: 0.5; --rand-y: 0.4; }
+    .ball-frame img:nth-child(14) { --rand-x: 0.7; --rand-y: 0.5; }
+    .ball-frame img:nth-child(15) { --rand-x: 0.4; --rand-y: 0.3; }
+    .ball-frame img:nth-child(16) { --rand-x: 0.8; --rand-y: 0.3; }
+    .ball-frame img:nth-child(17) { --rand-x: 0.92; --rand-y: 0.25; }
+
+    .crap-frame {
+      position: absolute;
+      top: 9%;
+      left: 43%;
+      height: 100px;
+    }
+
+    .crap-main {
+      position: relative;
+      transition: transform 3.0s ease;
+    }
+
+    .crap-main.clicked {
+      transform: translateY(130px);
+    }
+
+    .crap-stick {
+      position: absolute;
+      top: 7px;
+      left: -26%;
+      transform: translateX(-50%);
+      background-image: url('./img/crap_stick.svg');
+      background-size: auto 100%;
+      width: 10px;
+      height: 45px;
+      transition: height 3.0s ease; /* 변화에 대한 트랜지션 설정 */
+    }
+
+    .crap-stick.clicked {
+      height: 170px;
+    }
+
+    .crap-stick-ball {
+      position: absolute;
+      top: 47px;
+      /* left: 130%; */
+      transform: translateX(-50%);
+    }
+
+    .crap-left {
+      position: absolute;
+      top: 53px;
+      transform: translateX(-100%);
+    }
+
+    .crap-right {
+      position: absolute;
+      top: 53px;
+      transform: translateX(0%);
+    }
+
+    .crap-left img, .crap-right img {
+      width: 30px;
+      transition: transform 3.0s ease;
+    }
+
+    .crap-main.clicked .crap-left img {
+      transform-origin: top center;
+      transform: rotate(30deg);
+    }
+
+    .crap-main.clicked .crap-right img {
+      transform-origin: top center;
+      transform: rotate(-30deg);
+    }
+
+    .crap-right img {
+      width: 30px;
+    }
+
+    .handle-frame {
+      position: absolute;
+      bottom: 35%;
+      left: 42%;
+      transform-origin: bottom center;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="left-container">
+
+    </div>
+    <div id="center-container">
+      <div class="machine-frame">
+        <div class="img-item">
+          <img src="./img/claw_machine.svg">
+          <div class="ball-frame">
+            <img src="./img/green_ball.svg">
+            <img src="./img/blue_ball.svg">
+            <img src="./img/yellow_ball.svg">
+            <img src="./img/pink_ball.svg">
+            <img src="./img/green_ball.svg">
+            <img src="./img/blue_ball.svg">
+            <img src="./img/yellow_ball.svg">
+            <img src="./img/pink_ball.svg">
+            <img src="./img/green_ball.svg">
+            <img src="./img/blue_ball.svg">
+            <img src="./img/yellow_ball.svg">
+            <img src="./img/pink_ball.svg">
+            <img src="./img/green_ball.svg">
+            <img src="./img/blue_ball.svg">
+            <img src="./img/yellow_ball.svg">
+            <img src="./img/pink_ball.svg">
+            <img src="./img/green_ball.svg">
+          </div>
+          <div class="crap-frame">
+            <div class="crap-stick">
+            </div>
+            <div class="crap-main">
+              <div class="crap-stick-ball">
+                <img src="./img/crap_stick_ball.svg">
+              </div>
+              <div class="crap-left">
+                <img src="./img/left_crap.svg">
+              </div>
+              <div class="crap-right">
+                <img src="./img/right_crap.svg">
+              </div>
+            </div>
+          </div>
+          <div class="handle-frame">
+            <img src="./img/pink_handle.svg">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="right-container">
+
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const container = document.getElementById('container');
+      const handleFrame = document.querySelector('.handle-frame');
+      const crapFrame = document.querySelector('.crap-frame');
+      const crapMain = document.querySelector('.crap-main');
+      const crapStick = document.querySelector('.crap-stick');
+      const numSections = 37;
+      let isClicked = false;
+
+      container.addEventListener('mousemove', function(event) {
+        if (!isClicked) {
+          const containerWidth = 1904; // container 영역의 너비
+          const containerCenterX = containerWidth / 2;
+          const mouseX = event.clientX - container.getBoundingClientRect().left;
+          let mouseXNormalized = mouseX - containerCenterX;
+
+          // mouseXNormalized를 containerWidth 범위 내로 제한
+          mouseXNormalized = Math.max(Math.min(mouseXNormalized, containerWidth / 2), -containerWidth / 2);
+          const rotationValue = mouseXNormalized / (containerWidth / 2) * 20;
+
+          handleFrame.style.transform = `rotate(${rotationValue}deg)`;
+
+          // 각 구역의 너비 계산
+          const sectionWidth = containerWidth / numSections;
+          // 마우스 위치에 따른 구역 인덱스 계산
+          const sectionIndex = Math.floor((mouseXNormalized + containerCenterX) / sectionWidth);
+          // 구역 인덱스를 기반으로 left 값을 계산
+          const leftPercentage = ((sectionIndex + 1) * sectionWidth) / containerWidth * 100;
+
+          const clampedLeft = Math.max(Math.min(leftPercentage, 64), 27);
+          crapFrame.style.left = `${clampedLeft}%`;
+        }
+      });
+
+      document.addEventListener('click', function() {
+        isClicked = true; 
+        crapStick.classList.add('clicked');
+        crapMain.classList.add('clicked');
+
+        setTimeout(function() {
+          isClicked = false;
+          crapStick.classList.remove('clicked');
+          crapMain.classList.remove('clicked');
+        }, 3000);
+      });
+    });
+  </script>
+</body>
+</html>
