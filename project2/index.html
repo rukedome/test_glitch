@@ -12,20 +12,34 @@
       height: 100vh;
     }
 
-    #container {
-      display: flex;
-    }
-
-    #left-container {
+    #left-container, #right-container {
       flex: 1;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-content: center;
     }
 
     #center-container {
-      flex: 3;
+      flex: 1;
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
     }
+
+    #left-container a:nth-child(1) { transform: translateX(-30%) translateY(90%); }
+    #left-container a:nth-child(2) { transform: translateX(60%) translateY(40%); }
+    #left-container a:nth-child(3) { transform: translateX(-30%) translateY(20%); }
+    #left-container a:nth-child(4) { transform: translateX(60%) translateY(-10%); }
+    #left-container a:nth-child(5) { transform: translateX(-40%) translateY(-57%); }
+
+    #right-container a:nth-child(1) { transform: translateX(40%) translateY(90%); }
+    #right-container a:nth-child(2) { transform: translateX(-60%) translateY(40%); }
+    #right-container a:nth-child(3) { transform: translateX(30%) translateY(0%); }
+    #right-container a:nth-child(4) { transform: translateX(-50%) translateY(-50%); }
+    #right-container a:nth-child(5) { transform: translateX(30%) translateY(-80%); }
 
     .machine-frame {
       position: relative;
@@ -33,6 +47,13 @@
 
     .img-item {
       position: relative;
+    }
+
+    .title-item { 
+      color:rgba(238.00000101327896, 148.000006377697, 179.000004529953, 1);
+      text-align:center;
+      font-size: 5rem;
+      margin-bottom: 5rem;
     }
 
     .ball-frame {
@@ -157,9 +178,14 @@
 <body>
   <div id="container">
     <div id="left-container">
-
+      <a href="./capsule_page1.html"><img src="./img/capsule1.svg"></a>
+      <a href=""><img src="./img/capsule2.svg"></a>
+      <a href=""><img src="./img/capsule3.svg"></a>
+      <a href=""><img src="./img/capsule4.svg"></a>
+      <a href=""><img src="./img/capsule5.svg"></a>
     </div>
     <div id="center-container">
+      <div class="title-item">Time capsule</div>
       <div class="machine-frame">
         <div class="img-item">
           <img src="./img/claw_machine.svg">
@@ -204,7 +230,11 @@
       </div>
     </div>
     <div id="right-container">
-
+      <a href="./capsule_page2.html"><img src="./img/capsule6.svg"></a>
+      <a href=""><img src="./img/capsule7.svg"></a>
+      <a href=""><img src="./img/capsule8.svg"></a>
+      <a href=""><img src="./img/capsule9.svg"></a>
+      <a href=""><img src="./img/capsule10.svg"></a>
     </div>
   </div>
 

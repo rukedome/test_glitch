@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Jacques+Francois&display=swap');
+
+body {
+    font-family: "Jacques Francois", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.perfume-frame {
+    width: 300px;
+    height: 300px;
+    margin: 60px auto;
+    position: relative;
+}
+
+.bottle {
+    /* width: 120px;
+    height: 120px;
+    background-color: #29ccdb; */
+    position: relative;
+    border-radius: 5px;
+    border-top: 223px solid transparent;
+    border-left: 250px solid #EEB4C5;
+}
+
+.click-text {
+    transform: rotate(273deg);
+    position: relative;
+    top: 5px;
+    right: 20px;
+}
+
+.sprayer {
+    width: 55px;
+    height: 45px;
+    background-color: #c4baba;
+    border-radius: 5px;
+    position: absolute;
+    top: 76px;
+    left: 112px;
+    overflow: hidden;
+    z-index: 10;
+    transform: rotate(42deg);
+}
+
+.nozzle {
+    width: 10px;
+    height: 10px;
+    background: black;
+    border-radius: 100%;
+    position: absolute;
+    top: -3px;
+    left: 20px;
+}
+
+.puffer {
+    width: 100px;
+    height: 65px;
+    background-color: #9b5ce0;
+    border-radius: 100%;
+    text-align: center;
+    transform: rotate(20deg);
+    position: relative;
+    top: -35px;
+    left: 43px;
+}
+
+.hose {
+    width: 60px;
+    height: 5px;
+    background: #9b5ce0;
+    transform: rotate(20deg);
+    position: relative;
+    top: -55px;
+    left: 100px;
+    z-index: -1;
+}
+
+.spray {
+    animation: squeeze .5s ease;
+    transform-origin: center;
+}
+
+@keyframes squeeze {
+
+    0%,
+    100% {
+        transform: rotate(42deg);;
+    }
+
+    50% {
+        transform: rotate(42deg);;
+    }
+}
+
+.perfume {
+    width: 30px;
+    height: 30px;
+    transform: translate(155px, -64px) rotate(310deg);
+    position: absolute;
+    z-index: -10;
+    top: 145px;
+    right: 295px;
+}
+
+.drop {
+    width: 20px;
+    height: 3px;
+    background: #aaa;
+    margin: 5px;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    z-index: -1;
+}
+
+.one {
+    transform: rotate(-35deg)
+}
+
+.three {
+    transform: rotate(35deg)
+}
+
+.drop.spray {
+    animation: spritz 0.7s ease;
+}
+
+
+@keyframes spritz {
+    from {
+        transform: translate(5px, 10px);
+        margin: 0px;
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(100px, -25px);
+        margin: 20px;
+        opacity: 0;
+    }
+}
+
+.my-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 -15px;
+}
+
+.product-card {
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    margin: 0 15px;
+    min-height: 380px;
+    overflow: hidden;
+    position: relative;
+    transition: box-shadow .35s ease;
+    width: calc(25% - 30px);
+    word-wrap: break-word;
+}
+
+.product-card:hover {
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.25);
+}
+
+.product-card:hover .product-card__img {
+    opacity: .45;
+}
+
+.product-card:hover .card-foot {
+    bottom: 0px;
+}
+
+.product-card__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    margin-bottom: 10px;
+    transition: opacity .45s ease;
+    opacity: 1;
+    margin-top: 50px;
+}
+
+.product-card__image {
+    max-width: 100%;
+    max-height: 200px;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1.5s ease;
+}
+
+.product-card__image.active {
+    opacity: 1;
+}
+
+.product-card__labels {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.products-badge {
+    border-radius: 5px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    line-height: 14px;
+    font-size: 12px;
+    padding: 5px 10px;
+}
+
+.product-card__label {
+    display: inline-block;
+    margin: 2px;
+    padding: 2px 7px;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+.product-card__label--orange {
+    color: #ff3600;
+    border-color: #ff3600;
+}
+
+.product-card__label--green {
+    color: #00bf2d;
+    border-color: #00bf2d;
+}
+
+.products-price {
+    font-weight: bold;
+    line-height: 19px;
+    font-size: 20px;
+    text-align: right;
+}
+
+.products-price-discount {
+    font-size: 15px;
+    color: #aaa;
+    text-decoration: line-through;
+}
+
+.products-button {
+    padding: 5px 15px;
+    text-transform: uppercase;
+}
+
+.products-discount {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    font-size: 11px;
+    background-color: #FFD8DD;
+    color: #EA6363;
+    padding: 5px 10px;
+    font-style: normal;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+.products-pricing {
+    position: relative;
+}
+
+.card-foot {
+    position: absolute;
+    bottom: -40%;
+    z-index: 1000;
+    background-color: #fff;
+    transition: bottom .45s ease;
+    padding: 0.75rem 1.25rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+@media (max-width: 1200px) {
+    .product-card {
+        width: calc(33% - 30px);
+    }
+
+    .card-foot {
+        bottom: -35%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .product-card {
+        width: calc(50% - 30px);
+    }
+}
+
+@media (max-width: 768px) {
+    .product-card {
+        width: calc(100% - 30px);
+    }
+
+    .card-foot {
+        bottom: -22%;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-foot {
+        bottom: -27%;
+    }
+}
+
+@media (max-width: 340px) {
+    .card-foot {
+        bottom: -35%;
+    }
+}
