@@ -45,7 +45,7 @@
           </div>
           <div class="card-hidden">
             At first, Mojave Ghost exudes a fresh and sweet fruity scent, 
-            but as time passes, a robust woody undertone emerges.
+            but as time passes, a robust woody undertone emerges.<br><br>
           </div>
         </div>
       </div>
@@ -107,15 +107,12 @@
   <script>
     document.querySelectorAll('.sprayer').forEach(function(element) {
       element.addEventListener('click', function() {
-        // Add 'spray' class to clicked element
         this.classList.add('spray');
         
-        // Add 'spray' class to all elements with class 'drop'
         document.querySelectorAll('.drop').forEach(function(dropElement) {
           dropElement.classList.add('spray');
         });
         
-        // Remove 'spray' class after 600 milliseconds
         setTimeout(function() {
           document.querySelectorAll('.sprayer').forEach(function(pufferElement) {
             pufferElement.classList.remove('spray');
@@ -126,18 +123,6 @@
         }, 600);
       });
     });
-
-    // const puffer = document.querySelector(".puffer");
-    // const drop = document.querySelector(".drop");
-    // puffer.addEventListener('click', function() {
-    //     this.classList.add('spray');
-    //     drop.classList.add('spray');
-        
-    //     setTimeout(function() {
-    //       puffer.classList.remove('spray');
-    //       drop.classList.remove('spray');
-    //     }, 600);
-    //   });
 
   </script>
 </body>

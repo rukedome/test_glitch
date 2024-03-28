@@ -1,9 +1,8 @@
 const card = document.querySelector(".card");
-const container = document.querySelector(".container");
+const container = document.querySelector("#container");
 
 const title = document.querySelector(".title");
 const jellycat = document.querySelector(".jellycat img");
-const purchase = document.querySelector(".purchase");
 const description = document.querySelector(".info h3");
 const sizes = document.querySelector(".sizes");
 
@@ -18,7 +17,6 @@ container.addEventListener("mouseenter", (e) => {
   title.style.transform = "translateZ(150px)";
   jellycat.style.transform = "translateZ(200px) rotateZ(-30deg) scale(0.7)";
   description.style.transform = "translateZ(125px)";
-  purchase.style.transform = "translateZ(75px)";
 });
 
 container.addEventListener("mouseleave", (e) => {
@@ -27,5 +25,4 @@ container.addEventListener("mouseleave", (e) => {
   title.style.transform = "translateZ(0px)";
   jellycat.style.transform = "translateZ(0) rotateZ(0deg) scale(0.7)";
   description.style.transform = "translateZ(0px)";
-  purchase.style.transform = "translateZ(0px)";
 });
