@@ -100,6 +100,67 @@ button.active {
     background: #585858;
 }
 
+.home-div {
+    width: 98px;
+    height: 98px;
+    position: fixed;
+    top: 20px;
+    right: 30px;
+}
+
+.home-a {
+    border-radius: 500px;
+    background-color: rgba(231, 172, 203, 1);
+    width: 98px;
+    height: 98px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.home-span {
+    color: rgb(241, 215, 247, 1);
+    width: 70px;
+    height: 30px;
+    position: absolute;
+    left: 14px;
+    top: 34px;
+    font-family: Inter;
+    text-align: left;
+    font-size: 25px;
+    letter-spacing: 0;
+}
+
+.next-div {
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    top: 120px;
+    right: 35px;
+}
+
+.next-a {
+    background-color: rgba(187, 209, 226, 1);
+    width: 100px;
+    height: 40px;
+    position: absolute;
+    left: 0px;
+    top: 2px;
+}
+
+.next-span {
+    color: rgba(134, 184, 232, 1);
+    width: 56px;
+    height: 30px;
+    position: absolute;
+    left: 19px;
+    top: 0px;
+    font-family: Inter;
+    text-align: left;
+    font-size: 25px;
+    letter-spacing: 0;
+}
+
 @media screen and (min-width: 740px) {
     .card {
         width: 35rem;

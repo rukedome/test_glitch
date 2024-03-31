@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./css/style.css">
   <title>Project2</title>
   <style>
     body {
@@ -29,12 +29,26 @@
       flex-direction: column;
     }
 
+    #left-container img:hover,
+    #right-container img:hover {
+      animation: shake 0.1s ease-in-out infinite alternate;
+    }
+
+    @keyframes shake {
+      from {
+        transform: translateX(-5px);
+      }
+      to {
+        transform: translateX(5px);
+      }
+    }
+
     #left-container a:nth-child(1) { transform: translateX(-30%) translateY(90%); }
     #left-container a:nth-child(2) { transform: translateX(60%) translateY(40%); }
     #left-container a:nth-child(3) { transform: translateX(-30%) translateY(20%); }
     #left-container a:nth-child(4) { transform: translateX(60%) translateY(-10%); }
     #left-container a:nth-child(5) { transform: translateX(-40%) translateY(-57%); }
-
+   
     #right-container a:nth-child(1) { transform: translateX(40%) translateY(90%); }
     #right-container a:nth-child(2) { transform: translateX(-60%) translateY(40%); }
     #right-container a:nth-child(3) { transform: translateX(30%) translateY(0%); }
@@ -78,7 +92,7 @@
       );
     }
 
-    .ball-frame img:nth-child(1) { --rand-x: 0.2; --rand-y: 0.3; }
+    .ball-frame img:nth-child(1) { --rand-x: 0.2; --rand-y: 0.3;}
     .ball-frame img:nth-child(2) { --rand-x: 0.7; --rand-y: 0.5; }
     .ball-frame img:nth-child(3) { --rand-x: 0.4; --rand-y: 0.65; }
     .ball-frame img:nth-child(4) { --rand-x: 0.6; --rand-y: 0.4; }
@@ -230,17 +244,17 @@
       </div>
     </div>
     <div id="right-container">
-      <a href="./capsule_page2.html"><img src="./img/capsule6.svg"></a>
-      <a href=""><img src="./img/capsule7.svg"></a>
-      <a href=""><img src="./img/capsule8.svg"></a>
-      <a href=""><img src="./img/capsule9.svg"></a>
-      <a href=""><img src="./img/capsule10.svg"></a>
+      <a class="shaking-image" href="./capsule_page2.html"><img src="./img/capsule6.svg"></a>
+      <a class="shaking-image" href=""><img src="./img/capsule7.svg"></a>
+      <a class="shaking-image" href=""><img src="./img/capsule8.svg"></a>
+      <a class="shaking-image" href=""><img src="./img/capsule9.svg"></a>
+      <a class="shaking-image" href=""><img src="./img/capsule10.svg"></a>
     </div>
   </div>
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      const container = document.getElementById('container');
+      const container = document.querySelector('.img-item');
       const handleFrame = document.querySelector('.handle-frame');
       const crapFrame = document.querySelector('.crap-frame');
       const crapMain = document.querySelector('.crap-main');
@@ -250,7 +264,7 @@
 
       container.addEventListener('mousemove', function(event) {
         if (!isClicked) {
-          const containerWidth = 1904; // container 영역의 너비
+          const containerWidth = 400; // container 영역의 너비
           const containerCenterX = containerWidth / 2;
           const mouseX = event.clientX - container.getBoundingClientRect().left;
           let mouseXNormalized = mouseX - containerCenterX;
