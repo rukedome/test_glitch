@@ -3,6 +3,10 @@ body {
 	overflow: hidden;
 }
 
+a {
+    text-decoration: none;
+}
+
 #container {
 	position: absolute;
 	width: 100%;
@@ -12,33 +16,33 @@ body {
 .text-1 {
 	color: rgba(252, 211, 182, 1);
 	position: absolute;
-	right: 0.5rem;
-	bottom: 23rem;
+	right: -1.3rem;
+	bottom: 14rem;
 	font-family: Inter;
 	text-align: left;
-	font-size: 14rem;
+	font-size: 11rem;
 	letter-spacing: 1.2rem;
 }
 
 .text-2 {
 	color: rgba(252, 211, 182, 1);
 	position: absolute;
-	right: 0.5rem;
-	bottom: 11rem;
+	right: -1.3rem;
+	bottom: 6rem;
 	font-family: Inter;
 	text-align: left;
-	font-size: 14rem;
+	font-size: 11rem;
 	letter-spacing: 1.2rem;
 }
 
 .text-3 {
 	color: rgba(252, 211, 182, 1);
 	position: absolute;
-	right: 0.5rem;
-	bottom: -1rem;
+	right: -1.3rem;
+	bottom: -2rem;
 	font-family: Inter;
 	text-align: left;
-	font-size: 14rem;
+	font-size: 11rem;
 	letter-spacing: 1.2rem;
 }
 
@@ -46,98 +50,90 @@ body {
 	position: absolute;
 	top: 2%;
     right: 10%;
-	opacity: 0.5;
+	opacity: 0.2;
 }
 
 .img2 {
 	position: absolute;
 	top: 21%;
     right: 25%;
-	opacity: 0.5;
+	opacity: 0.2;
 }
 
 .img3 {
 	position: absolute;
 	bottom: 5%;
     left: 20%;
-	opacity: 0.5;
+	opacity: 0.2;
 }
 
 .img4 {
 	position: absolute;
 	top: 10%;
     left: 5%;
-	opacity: 0.5;
+	opacity: 0.2;
 }
 
 .img5 {
 	position: absolute;
 	top: 2%;
     left: 25%;
-	opacity: 0.5;
+	opacity: 0.2;
 }
 
 .img-hover:hover {
 	opacity: 1.0;
 }
 
-.home-div {
-	width: 98px;
-	height: 98px;
-	position: fixed;
-	top: 20px;
-	right: 30px;
+.fix-move {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.home-a {
-	border-radius: 500px;
-	background-color: rgba(255, 188, 139, 1);
-	width: 98px;
-	height: 98px;
-	position: absolute;
-	left: 0px;
-	top: 0px;
+.home-div, .next-div {
+    width: 98px;
+    height: 98px;
+    position: relative;
+    margin-bottom: 10px;
 }
 
-.home-span {
-	color: rgba(255, 107, 0, 1);
-	width: 70px;
-	height: 30px;
-	position: absolute;
-	left: 14px;
-	top: 34px;
-	font-family: Inter;
-	text-align: left;
-	font-size: 25px;
-	letter-spacing: 0;
+.home-div .home-a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 500px;
+    background-color: rgba(255, 188, 139, 1);
+    width: 98px;
+    height: 98px;
 }
 
-.next-div {
-	width: 100px;
-	height: 30px;
-	position: absolute;
-	top: 120px;
-	right: 35px;
+.next-div .next-a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 220, 194, 1);
+    width: 100px;
+    height: 40px;
 }
 
-.next-a {
-	background-color: rgba(255, 220, 194, 1);
-	width: 100px;
-	height: 40px;
-	position: absolute;
-	left: 0px;
-	top: 2px;
+.home-div .home-span {
+    color: rgb(255, 107, 0, 1);
+    width: 70px;
+    height: 30px;
+    font-family: Inter;
+    font-size: 25px;
+    text-align: center;
 }
 
-.next-span {
-	color: rgba(255, 158, 88, 1);
-	width: 56px;
-	height: 30px;
-	position: absolute;
-	left: 19px;
-	top: 0px;
-	font-family: Inter;
-	text-align: left;
-	font-size: 25px;
-	letter-spacing: 0;
+.next-div .next-span {
+    color: rgba(255, 158, 88, 1);
+    width: 56px;
+    height: 30px;
+    font-family: Inter;
+    font-size: 25px;
+    text-align: center;
 }

@@ -8,20 +8,12 @@
 </head>
 
 <body>
-  <div id="container" class="container">
-    <div class="img1 img-hover">
-      <img id="img1" src="./img/bear1.svg" draggable="true" ondragstart="drag(event)" >
-    </div>
-    <div class="img2 img-hover">
-      <img id="img2" src="./img/bear2.svg" draggable="true" ondragstart="drag(event)" >
-    </div>
-    <div class="img3 img-hover">
-      <img id="img3" src="./img/bear3.svg" draggable="true" ondragstart="drag(event)" >
-    </div>
-    <div class="img4 img-hover" draggable="true" ondragstart="drag(event)">
-      <img id="img4" src="./img/bear4.svg" >
-    </div>
-    <div id="notebook" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <div id="container" class="container" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <img id="img1" src="./img/bear1.svg" draggable="true" ondragstart="drag(event)" >
+    <img id="img2" src="./img/bear2.svg" draggable="true" ondragstart="drag(event)" >
+    <img id="img3" src="./img/bear3.svg" draggable="true" ondragstart="drag(event)" >
+    <img id="img4" src="./img/bear4.svg" draggable="true" ondragstart="drag(event)" >
+    <div id="notebook">
       <div class="base">
         <img src="https://i.etsystatic.com/10983680/r/il/46e33b/1313683944/il_794xN.1313683944_gp1h.jpg" />
       </div>

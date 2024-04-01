@@ -1,3 +1,14 @@
+let container = document.getElementById("container");
+let initialPageWidth, initialPageHeight;
+
+window.onload = function() {
+    initialPageWidth = window.innerWidth;
+    initialPageHeight = window.innerHeight;
+    container.style.width = initialPageWidth + 'px';
+    container.style.height = initialPageHeight + 'px';
+    // container.style.overflow = "hidden";
+};
+
 function allowDrop(event) {
     event.preventDefault();
 }
@@ -10,23 +21,20 @@ function drop(event) {
     event.preventDefault();
     let data = event.dataTransfer.getData("text");
     let img = document.getElementById(data);
-    let container = document.getElementsByClassName("base");
-    let frame_img = container[0];
-    if (frame_img.contains(event.target)) {
-        img.style.width = "70px"; 
-        img.style.height = "auto"; 
-
-        // let offsetX = event.clientX - frame_img.offsetLeft;
-        // let offsetY = event.clientY - frame_img.offsetTop;
-
-        // img.style.right = offsetX - img.width / 2 + "px";
-        // img.style.bottom = offsetY - img.height / 2 + "px";
-        img.style.right = frame_img.offsetRight;
-        img.style.bottom = frame_img.offsetBottom;
-        img.style.position = "absolute";
-
-        frame_img
+    let base = document.getElementsByClassName("base");
+    let base_frame = base[0];
+    if (container.contains(event.target)) {
+        img.removeAttribute("id");
         
-        frame_img.appendChild(img); // #notebook 내부에 이미지 추가
+        img.style.scale = "0.5";
+
+        let offsetX = event.clientX;
+        let offsetY =  event.clientY;
+
+        img.style.left = offsetX - img.width / 2 + "px";
+        img.style.top = offsetY - img.height / 2 + "px";
+
+        img.style.position = "absolute";
+        container.appendChild(img); // #notebook 내부에 이미지 추가
     }
 }

@@ -1,0 +1,135 @@
+body {
+	background-color: rgba(237, 255, 255, 1);
+	overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+#container {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.text-1 {
+	color: rgba(178, 255, 250, 1);
+	position: absolute;
+	right: -0.5rem;
+	bottom: 6.4rem;
+	font-family: Inter;
+	text-align: left;
+	font-size: 14rem;
+	letter-spacing: 1.2rem;
+}
+
+.text-2 {
+	color: rgba(178, 255, 250, 1);
+	position: absolute;
+	right: -0.5rem;
+	bottom: -3rem;
+	font-family: Inter;
+	text-align: left;
+	font-size: 14rem;
+	letter-spacing: 1.2rem;
+}
+
+.img1 {
+	position: absolute;
+	top: 15%;
+    right: 3%;
+	opacity: 0.2;
+}
+
+.img2 {
+	position: absolute;
+	bottom: 27%;
+	right: 26%;
+	opacity: 0.2;
+}
+
+.img3 {
+	position: absolute;
+	bottom: 7%;
+	left: 1%;
+	opacity: 0.2;
+}
+
+.img4 {
+	position: absolute;
+	top: -4%;
+	left: 52%;
+	opacity: 0.2;
+}
+
+.img5 {
+	position: absolute;
+	bottom: 38%;
+	left: 37%;
+	opacity: 0.2;
+}
+
+.img6 {
+	position: absolute;
+	left: 0%;
+	top: -2%;
+	opacity: 0.2;
+}
+
+.img-hover:hover {
+	opacity: 1.0;
+}
+
+.fix-move {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-div, .next-div {
+    width: 98px;
+    height: 98px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.home-div .home-a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 500px;
+	background-color: rgba(169, 255, 255, 1);
+	width: 98px;
+	height: 98px;
+}
+
+.next-div .next-a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(204, 255, 255, 1);
+    width: 100px;
+    height: 40px;
+}
+
+.home-div .home-span {
+    color: rgba(46, 255, 255, 1);
+    width: 70px;
+    height: 30px;
+    font-family: Inter;
+    font-size: 25px;
+    text-align: center;
+}
+
+.next-div .next-span {
+    color: rgba(46, 255, 255, 1);
+    width: 56px;
+    height: 30px;
+    font-family: Inter;
+    font-size: 25px;
+    text-align: center;
+}

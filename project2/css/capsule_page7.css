@@ -1,9 +1,16 @@
+body {
+    overflow: hidden;
+}
+
 a {
     text-decoration: none;
 }
 
 #container {
     position: relative;
+    width: 1512px;
+    height: 824px;
+    overflow: hidden;
 }
 
 #notebook { 
@@ -121,25 +128,25 @@ a {
     line-height: 0.9;
 }
 
-.img1 {
+#img1 {
 	position: absolute;
 	left: 5%;
 	top: 10%;
 }
 
-.img2 {
+#img2 {
 	position: absolute;
 	left: 15%;
 	bottom: 5%;
 }
 
-.img3 {
+#img3 {
 	position: absolute;
 	left: 10%;
 	top: 25%;
 }
 
-.img4 {
+#img4 {
 	position: absolute;
 	left: 25%;
 	top: 5%;
