@@ -24,17 +24,19 @@ function drop(event) {
     let base = document.getElementsByClassName("base");
     let base_frame = base[0];
     if (container.contains(event.target)) {
-        img.removeAttribute("id");
-        
-        img.style.scale = "0.5";
-
+        let rect = base_frame.getBoundingClientRect();
         let offsetX = event.clientX;
         let offsetY =  event.clientY;
 
-        img.style.left = offsetX - img.width / 2 + "px";
-        img.style.top = offsetY - img.height / 2 + "px";
-
-        img.style.position = "absolute";
-        container.appendChild(img); // #notebook 내부에 이미지 추가
+        if ((rect.top <= offsetY && offsetY <= rect.top + rect.height) &&
+            (rect.left <= offsetX && offsetX <= rect.left + rect.width)) {
+            img.removeAttribute("id");
+            img.style.scale = "0.5";
+            img.style.left = offsetX - img.width / 2 + "px";
+            img.style.top = offsetY - img.height / 2 + "px";
+    
+            img.style.position = "absolute";
+            container.appendChild(img);
+        }
     }
 }
