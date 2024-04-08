@@ -1,0 +1,20 @@
+body {
+  background-color: #D3CCC3;
+}
+
+#container {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 800px;
+  margin: 0 auto;
+  top: 50%;
+  left: calc(50% - 400px);
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: #F86530;
+}
