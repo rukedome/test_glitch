@@ -199,6 +199,34 @@ h1+p {
     background-color: #c7eec3;
   }
 
+  &.book11 {
+    right: 0.8rem;
+    bottom: 9.1rem;
+    color: #1b5d0a;
+    background-color: #a2d9a8;
+  }
+
+  &.book12 {
+    right: 2rem;
+    bottom: 6.1rem;
+    color: #1b5d0a;
+    background-color: #c7eec3;
+  }
+ 
+  &.book13 {
+    right: 0.8rem;
+    bottom: 9.0rem;
+    color: #1b5d0a;
+    background-color: #a2d9a8;
+  }
+
+  &.book14 {
+    right: 2rem;
+    bottom: 6.1rem;
+    color: #1b5d0a;
+    background-color: #c7eec3;
+  }
+
   &:hover:not(.not-found) {
     background-color: rgba(255, 255, 255, 0.2);
   }
