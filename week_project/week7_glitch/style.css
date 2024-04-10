@@ -1,0 +1,21 @@
+#description {
+  font-family: "Helvetica", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 40px;
+  width: 500px;
+}
+
+#description span {
+  color: red;
+}
+
+div:not(#description) {
+  color: blue;
+  font-family: "Times New Roman", serif;
+  font-size: 36px;
+  letter-spacing: -0.03em;
+  margin-bottom: 40px;
+}

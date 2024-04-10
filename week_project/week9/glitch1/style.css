@@ -1,0 +1,33 @@
+body {
+  background-color: #E5E0E0;
+}
+
+h1, h2 {
+  font-size: 18px;
+  font-family: 'Helvetica', sans-serif;
+  text-align: center;
+}
+
+h1 {
+  color: #4962EA;
+}
+
+#text {
+  width: 800px;
+  margin: auto;
+  font-size: 28px;
+  letter-spacing: -0.01em;
+  color: transparent;
+  text-shadow: 0 0 0px rgba(0,0,0);
+}
+
+input[type=range] {
+  display: block;
+  margin: 20px auto;
+  width: 500px;
+}
+
+#alert {
+  color: red;
+  display: none;
+}
