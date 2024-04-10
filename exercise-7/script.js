@@ -1,13 +1,13 @@
 function drawShapes() {
-  var shape = document.getElementById("shape").value;
-  var size = document.getElementById("size").value;
-  var quantity = document.getElementById("quantity").value;
+  let shape = document.getElementById("shape").value;
+  let size = document.getElementById("size").value;
+  let quantity = document.getElementById("quantity").value;
 
-  var result = document.getElementById("shape-result");
+  let result = document.getElementById("shape-result");
   result.innerHTML = "";
 
-  for (var i = 0; i < quantity; i++) {
-    var shapeDiv = document.createElement("div");
+  for (let i = 0; i < quantity; i++) {
+    let shapeDiv = document.createElement("div");
     shapeDiv.classList.add("shape");
 
     if (shape === "circle") {
@@ -29,11 +29,11 @@ function drawShapes() {
 }
 
 function generateRandomImage() {
-  var result = document.getElementById("image-result");
+  let result = document.getElementById("image-result");
   result.innerHTML = "";
 
-  var randomIndex = Math.floor(Math.random() * 5) + 1;
-  var randomImage = document.createElement("img");
+  let randomIndex = Math.floor(Math.random() * 5) + 1;
+  let randomImage = document.createElement("img");
   randomImage.classList.add("random-image");
   randomImage.src = `./img/airpods_case${randomIndex}.svg`;
   result.appendChild(randomImage);
@@ -41,9 +41,9 @@ function generateRandomImage() {
 
 
 function getRandomColor() {
-  var letters = "0123456789ABCDEF";
-  var color = "#";
-  for (var i = 0; i < 6; i++) {
+  let letters = "0123456789ABCDEF";
+  let color = "#";
+  for (let i = 0; i < 6; i++) {
     color += letters[Math.floor(Math.random() * 16)];
   }
   return color;

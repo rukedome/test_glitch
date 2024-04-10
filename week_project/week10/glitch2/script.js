@@ -8,7 +8,7 @@
 // STEP 1: HTML
 // Add a text input in the HTML with placeholder text that says "Write 'dogs' or 'cats'". Give it an ID.
 
-// <input type="text" id="animalInput" placeholder="Write 'dogs' or 'cats'">
+// <input type="text" id="animal_input" placeholder="Write 'dogs' or 'cats'">
 
 
 // STEP 2: CSS
@@ -17,7 +17,7 @@
 // STEP 3: VARIABLES
 // Save the relevant elements as variables by their IDs.
 
-const animalInput = document.getElementById('animal_input');
+let animalInput = document.getElementById('animal_input');
 
 // STEP 4: FUNCTION
 // Create the function called "generateAnimals()" that will fire when the user presses the button.
@@ -37,12 +37,14 @@ function generateAnimals() {
     // If the answer is "cats", change the background to a gif of cats.
     // If neither, change the background to a gif of another animal.
     // Hint: use "document.body" to target the body element.
-    if (animalInput.value.toLowerCase() === 'dogs') {
+    if (animalInput.value === 'dogs') {
         document.body.style.backgroundImage = "url('dog.gif')";
-    } else if (animalInput.value.toLowerCase() === 'cats') {
+    } else if (animalInput.value === 'cats') {
         document.body.style.backgroundImage = "url('cat.gif')";
-    } else {
+    } else if (animalInput.value === 'rabbit') {
         document.body.style.backgroundImage = "url('rabbit.gif')";
+    } else {
+        document.body.style.backgroundImage = '';
     }
 }
 
