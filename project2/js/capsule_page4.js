@@ -1,5 +1,5 @@
 var winWidth = $(window).width();
-var ratio = winWidth / 1920;
+var ratio = winWidth / 1512;
 var fontSize = {
   small: 12,
   medium: 14
@@ -29,11 +29,11 @@ vara[0] = new Vara(
       y: 40,
       x: posX,
       duration: 4000,
-      letterSpacing: 0
     },
     {
       text: "I went Hollywood Stuio and Epcot",
       id: "sphinx",
+      y: 40,
       x: posX,
       delay: 1000,
       duration: 4500

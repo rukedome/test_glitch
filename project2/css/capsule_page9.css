@@ -48,36 +48,36 @@ a {
 
 .img1 {
 	position: absolute;
-	right: 15%;
-    top: 0%;
+	right: 5%;
+	bottom: 8%;
 	opacity: 0.2;
 }
 
 .img2 {
 	position: absolute;
-	left: 20%;
-    bottom: 4%;
+	left: 51%;
+	bottom: 4%;
 	opacity: 0.2;
 }
 
 .img3 {
 	position: absolute;
-	left: 50%;
-    bottom: 15%;
+	left: 5%;
+	bottom: -2%;
 	opacity: 0.2;
 }
 
 .img4 {
 	position: absolute;
-	right: 6%;
-    bottom: 4%;
+	right: 5%;
+	top: 4%;
 	opacity: 0.2;
 }
 
 .img5 {
 	position: absolute;
-	right: 20%;
-    top: 43%;
+	left: 20%;
+	bottom: 2%;
 	opacity: 0.2;
 }
 
