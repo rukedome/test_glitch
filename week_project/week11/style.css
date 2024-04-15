@@ -1,0 +1,20 @@
+body {
+  cursor: pointer;
+  font-size: 20px;
+  transition: 0.3s;
+  height: 100vh;
+  font-size: 48px;
+  font-family: sans-serif;
+}
+
+img {
+  height:100px;
+  position: fixed;
+  bottom: 0px;
+}
+
+.reef {
+  background-image: url("https://media.tenor.com/8KLkpFEcAhgAAAAC/swimming-coral-reef.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
