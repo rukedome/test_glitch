@@ -1,5 +1,7 @@
 body {
-    background-color: #C6E8F1;
+    background-image:url(img/bg.svg);
+	background-repeat:no-repeat;
+	background-size:cover;
 }
 
 #container {
@@ -77,7 +79,7 @@ label {
 }
 
 .text_msg1 label, .text_msg2 label {
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: bold;
     color: rgb(249, 166, 179);
     white-space: nowrap;
