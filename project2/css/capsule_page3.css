@@ -1,6 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+20&display=swap');
+
 body {
 	background-color: rgba(237, 255, 255, 1);
 	overflow: hidden;
+	font-family: "Jersey 20", sans-serif;
+	font-weight: 400;
+	font-style: normal;
 }
 
 a {
@@ -18,7 +23,7 @@ a {
 	position: absolute;
 	right: -0.5rem;
 	bottom: 6.4rem;
-	font-family: Inter;
+	/* font-family: Inter; */
 	text-align: left;
 	font-size: 14rem;
 	letter-spacing: 1.2rem;
@@ -29,7 +34,7 @@ a {
 	position: absolute;
 	right: -0.5rem;
 	bottom: -3rem;
-	font-family: Inter;
+	/* font-family: Inter; */
 	text-align: left;
 	font-size: 14rem;
 	letter-spacing: 1.2rem;

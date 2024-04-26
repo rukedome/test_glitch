@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+20&display=swap');
 
 * {
     box-sizing: border-box;
@@ -11,7 +11,9 @@ body {
     background: -webkit-radial-gradient(top left, #EF7AAF, #ACD1FB);
     background: -moz-radial-gradient(top left, #EF7AAF, #ACD1FB);
     background: radial-gradient(to bottom right, #EF7AAF, #ACD1FB);
-    font-family: "Poppins", sans-serif;
+    font-family: "Jersey 20", sans-serif;
+	font-weight: 400;
+	font-style: normal;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -173,10 +175,10 @@ button.active {
     }
 
     .info h1 {
-        font-size: 3rem;
+        font-size: 4rem;
     }
 
     .info h3 {
-        font-size: 1.3rem;
+        font-size: 1.6rem;
     }
 }
