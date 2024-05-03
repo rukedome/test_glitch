@@ -1,3 +1,4 @@
+// p5.js 시작 진입 점 canvas 그리기 (그리기 영역)
 function setup() {
   createCanvas(400, 400);
   drawFlower();
@@ -28,11 +29,13 @@ function drawFlower() {
 
   // 잎 그리기
   fill("#AEC325");
-  drawLeaf(centerX, centerY + 150, 80, 160, 45);
+  drawLeaf(centerX, centerY + 150, 45);
   fill("#DB3A38");
-  drawLeaf(centerX, centerY + 150, 80, 160, 135);
+  drawLeaf(centerX, centerY + 150, 135);
 }
 
+// 파라미터를 받아 꽃잎 그리기
+// 위치 선택 후 각도를 조절하여 타원형을 그립니다.
 function drawPetal(centerX, centerY, x, y, rotation) {
   push();
   translate(centerX + x, centerY + y);
@@ -41,7 +44,9 @@ function drawPetal(centerX, centerY, x, y, rotation) {
   pop();
 }
 
-function drawLeaf(centerX, centerY, width, height, rotation) {
+// 파라미터를 받아 잎사귀(꽃잎 받침을) 그리기
+// 위치 선택 후 각도를 조절하여 타원형 모양을 직접 선을 연결하여 그립니다.
+function drawLeaf(centerX, centerY, rotation) {
   push();
   translate(centerX, centerY);
   rotate(radians(rotation));
