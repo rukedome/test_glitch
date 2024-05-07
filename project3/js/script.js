@@ -7,6 +7,9 @@ darkModeToggle.addEventListener("click", function () {
   if (isDarkMode) {
     body.classList.remove("dark-mode");
     darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+    document.getElementsByClassName("center")[0].style.backgroundColor = "#000";
+    document.getElementsByClassName("hourHand")[0].style.backgroundColor = "#000";
+    document.getElementsByClassName("minuteHand")[0].style.backgroundColor = "#000";
     clockNumbers.forEach(function(number) {
       if (number.textContent === "3" || number.textContent === "6" || number.textContent === "9" || number.textContent === "12") {
         number.style.color = "#000";
@@ -15,6 +18,9 @@ darkModeToggle.addEventListener("click", function () {
   } else {
     body.classList.add("dark-mode");
     darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+    document.getElementsByClassName("center")[0].style.backgroundColor = "#fff";
+    document.getElementsByClassName("hourHand")[0].style.backgroundColor = "#fff";
+    document.getElementsByClassName("minuteHand")[0].style.backgroundColor = "#fff";
     clockNumbers.forEach(function(number) {
       if (number.textContent === "3" || number.textContent === "6" || number.textContent === "9" || number.textContent === "12") {
         number.style.color = "#fff";
