@@ -36,7 +36,7 @@ function drawWord() {
     div.classList.add("move" + i);
     let label = document.createElement("label");
     label.classList.add("text-number");
-    label.textContent = i;
+    label.textContent = '';
     div.appendChild(label);
 
     document.body.appendChild(div);
@@ -79,6 +79,11 @@ window.onload = function () {
       second +
       "</small>" +
       "</span>";
+
+    let textNumbers = document.querySelectorAll(".text-number");
+    textNumbers.forEach(function (textNumber) {
+      textNumber.textContent = second;
+    });
   }
 
   setInterval(setDate, 1000);
@@ -111,18 +116,16 @@ function changeColor() {
     "#2E8B57",
     "#9932CC",
   ];
-  let randomColor;
-  while (true) {
-    let randomIndex = Math.floor(Math.random() * colors.length);
-    randomColor = colors[randomIndex];
-    break;
-  }
+
+  let randomIndex = Math.floor(Math.random() * colors.length);
+  let randomColor = colors[randomIndex];
 
   let textNumbers = document.querySelectorAll(".text-number");
   textNumbers.forEach(function (textNumber) {
     textNumber.style.color = randomColor;
   });
 }
+
 
 //setInterval(changeColor, 60000);
 setInterval(changeColor, 3000);
