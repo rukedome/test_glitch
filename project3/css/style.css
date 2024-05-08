@@ -1,3 +1,7 @@
+:root {
+    --move-dur: 4s;
+}
+
 body {
     background-color: coral;
     padding: 0;
@@ -217,13 +221,34 @@ body {
 }
 
 /*------------------------------*/
+
+.move0 {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    margin-left: 50%;
+    margin-top: 23%;
+    animation: move60 var(--move-dur) ease-in -3.25s infinite forwards, fade 3s ease-in;
+}
+
+
+@keyframes move0 {
+    0% {
+        transform: scale(0.0) translateX(0px) translateY(0px) translateZ(0px);
+    }
+
+    100% {
+        transform: scale(1.2) translateX(300px) translateY(-240px) translateZ(0px);
+    }
+}
+
 .move1 {
     position: absolute;
     height: 50px;
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move1 15s ease-in 0s infinite forwards, fade 3.5s ease-in;
+    animation: move1 var(--move-dur) ease-in 0s infinite forwards, fade 3.5s ease-in;
 }
 
 @keyframes move1 {
@@ -242,7 +267,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move2 15s ease-in 0s infinite forwards, fade 3.5s ease-in;
+    animation: move2 var(--move-dur) ease-in 0s infinite forwards, fade 3.5s ease-in;
 }
 
 @keyframes move2 {
@@ -261,7 +286,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move3 15s ease-in 0s infinite forwards, fade 3.5s ease-in;
+    animation: move3 var(--move-dur) ease-in 0s infinite forwards, fade 3.5s ease-in;
 }
 
 @keyframes move3 {
@@ -280,7 +305,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move4 15s ease-in 0s infinite forwards, fade 3.5s ease-in;
+    animation: move4 var(--move-dur) ease-in 0s infinite forwards, fade 3.5s ease-in;
 }
 
 @keyframes move4 {
@@ -299,7 +324,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move5 15s ease-in 0s infinite forwards, fade 3.5s ease-in;
+    animation: move5 var(--move-dur) ease-in 0s infinite forwards, fade 3.5s ease-in;
 }
 
 @keyframes move5 {
@@ -318,7 +343,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move6 15s ease-in 0s infinite forwards, fade 3.5s ease-in;
+    animation: move6 var(--move-dur) ease-in 0s infinite forwards, fade 3.5s ease-in;
 }
 
 @keyframes move6 {
@@ -337,7 +362,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move7 15s ease-in 0s infinite forwards, fade 3.5s ease-in;
+    animation: move7 var(--move-dur) ease-in 0s infinite forwards, fade 3.5s ease-in;
 }
 
 @keyframes move7 {
@@ -356,7 +381,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move8 15s ease-in -4.5s infinite forwards, fade 3s ease-in;
+    animation: move8 var(--move-dur) ease-in -4.5s infinite forwards, fade 3s ease-in;
 }
 
 
@@ -376,7 +401,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move9 15s ease-in -4.5s infinite forwards, fade 3s ease-in;
+    animation: move9 var(--move-dur) ease-in -4.5s infinite forwards, fade 3s ease-in;
 }
 
 
@@ -396,7 +421,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move10 15s ease-in -4.5s infinite forwards, fade 3s ease-in;
+    animation: move10 var(--move-dur) ease-in -4.5s infinite forwards, fade 3s ease-in;
 }
 
 
@@ -416,7 +441,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move11 15s ease-in -4.5s infinite forwards, fade 3s ease-in;
+    animation: move11 var(--move-dur) ease-in -4.5s infinite forwards, fade 3s ease-in;
 }
 
 
@@ -436,7 +461,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move12 15s ease-in -4.5s infinite forwards, fade 3s ease-in;
+    animation: move12 var(--move-dur) ease-in -4.5s infinite forwards, fade 3s ease-in;
 }
 
 
@@ -456,7 +481,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move13 15s ease-in -4.5s infinite forwards, fade 3s ease-in;
+    animation: move13 var(--move-dur) ease-in -4.5s infinite forwards, fade 3s ease-in;
 }
 
 
@@ -476,7 +501,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move14 15s ease-in -4.5s infinite forwards, fade 3s ease-in;
+    animation: move14 var(--move-dur) ease-in -4.5s infinite forwards, fade 3s ease-in;
 }
 
 
@@ -496,7 +521,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move15 15s ease-in -4.5s infinite forwards, fade 3s ease-in;
+    animation: move15 var(--move-dur) ease-in -4.5s infinite forwards, fade 3s ease-in;
 }
 
 
@@ -516,7 +541,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move16 15s ease-in -4.5s infinite forwards, fade 3s ease-in;
+    animation: move16 var(--move-dur) ease-in -4.5s infinite forwards, fade 3s ease-in;
 }
 
 
@@ -536,7 +561,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move17 15s ease-in -4.5s infinite forwards, fade 3s ease-in;
+    animation: move17 var(--move-dur) ease-in -4.5s infinite forwards, fade 3s ease-in;
 }
 
 
@@ -556,7 +581,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move18 15s ease-in -4.5s infinite forwards, fade 3s ease-in;
+    animation: move18 var(--move-dur) ease-in -4.5s infinite forwards, fade 3s ease-in;
 }
 
 
@@ -576,7 +601,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move19 15s ease-in -4.5s infinite forwards, fade 3s ease-in;
+    animation: move19 var(--move-dur) ease-in -4.5s infinite forwards, fade 3s ease-in;
 }
 
 
@@ -596,7 +621,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move20 15s ease-in -4.5s infinite forwards, fade 3s ease-in;
+    animation: move20 var(--move-dur) ease-in -4.5s infinite forwards, fade 3s ease-in;
 }
 
 
@@ -616,7 +641,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move21 15s ease-in -4.5s infinite forwards, fade 3s ease-in;
+    animation: move21 var(--move-dur) ease-in -4.5s infinite forwards, fade 3s ease-in;
 }
 
 
@@ -636,7 +661,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move22 15s ease-in -6.75s infinite forwards, fade 3s ease-in;
+    animation: move22 var(--move-dur) ease-in -6.75s infinite forwards, fade 3s ease-in;
 }
 
 
@@ -656,7 +681,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move23 15s ease-in -6.75s infinite forwards, fade 3s ease-in;
+    animation: move23 var(--move-dur) ease-in -6.75s infinite forwards, fade 3s ease-in;
 }
 
 
@@ -676,7 +701,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move24 15s ease-in -6.75s infinite forwards, fade 3s ease-in;
+    animation: move24 var(--move-dur) ease-in -6.75s infinite forwards, fade 3s ease-in;
 }
 
 
@@ -696,7 +721,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move25 15s ease-in -6.75s infinite forwards, fade 3s ease-in;
+    animation: move25 var(--move-dur) ease-in -6.75s infinite forwards, fade 3s ease-in;
 }
 
 
@@ -716,7 +741,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move26 15s ease-in -6.75s infinite forwards, fade 3s ease-in;
+    animation: move26 var(--move-dur) ease-in -6.75s infinite forwards, fade 3s ease-in;
 }
 
 
@@ -736,7 +761,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move27 15s ease-in -6.75s infinite forwards, fade 3s ease-in;
+    animation: move27 var(--move-dur) ease-in -6.75s infinite forwards, fade 3s ease-in;
 }
 
 
@@ -756,7 +781,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move28 15s ease-in -6.75s infinite forwards, fade 3s ease-in;
+    animation: move28 var(--move-dur) ease-in -6.75s infinite forwards, fade 3s ease-in;
 }
 
 
@@ -776,7 +801,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move29 15s ease-in -6.75s infinite forwards, fade 3s ease-in;
+    animation: move29 var(--move-dur) ease-in -6.75s infinite forwards, fade 3s ease-in;
 }
 
 
@@ -796,7 +821,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move30 15s ease-in -2.25s infinite forwards, fade 3s ease-in;
+    animation: move30 var(--move-dur) ease-in -2.25s infinite forwards, fade 3s ease-in;
 }
 
 @keyframes move30 {
@@ -815,7 +840,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move31 15s ease-in -2.25s infinite forwards, fade 3s ease-in;
+    animation: move31 var(--move-dur) ease-in -2.25s infinite forwards, fade 3s ease-in;
 }
 
 @keyframes move31 {
@@ -834,7 +859,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move32 15s ease-in -2.25s infinite forwards, fade 3s ease-in;
+    animation: move32 var(--move-dur) ease-in -2.25s infinite forwards, fade 3s ease-in;
 }
 
 @keyframes move32 {
@@ -853,7 +878,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move33 15s ease-in -2.25s infinite forwards, fade 3s ease-in;
+    animation: move33 var(--move-dur) ease-in -2.25s infinite forwards, fade 3s ease-in;
 }
 
 @keyframes move33 {
@@ -872,7 +897,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move34 15s ease-in -2.25s infinite forwards, fade 3s ease-in;
+    animation: move34 var(--move-dur) ease-in -2.25s infinite forwards, fade 3s ease-in;
 }
 
 @keyframes move34 {
@@ -891,7 +916,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move35 15s ease-in -2.25s infinite forwards, fade 3s ease-in;
+    animation: move35 var(--move-dur) ease-in -2.25s infinite forwards, fade 3s ease-in;
 }
 
 @keyframes move35 {
@@ -910,7 +935,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move36 15s ease-in -2.25s infinite forwards, fade 3s ease-in;
+    animation: move36 var(--move-dur) ease-in -2.25s infinite forwards, fade 3s ease-in;
 }
 
 @keyframes move36 {
@@ -929,7 +954,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move37 15s ease-in -2.25s infinite forwards, fade 3s ease-in;
+    animation: move37 var(--move-dur) ease-in -2.25s infinite forwards, fade 3s ease-in;
 }
 
 @keyframes move37 {
@@ -948,7 +973,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move38 15s ease-in -2.25s infinite forwards, fade 3s ease-in;
+    animation: move38 var(--move-dur) ease-in -2.25s infinite forwards, fade 3s ease-in;
 }
 
 @keyframes move38 {
@@ -967,7 +992,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move39 15s ease-in -2.75s infinite forwards, fade 3s ease-in;
+    animation: move39 var(--move-dur) ease-in -2.75s infinite forwards, fade 3s ease-in;
 }
 
 @keyframes move39 {
@@ -986,7 +1011,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move40 15s ease-in -2.25s infinite forwards, fade 3s ease-in;
+    animation: move40 var(--move-dur) ease-in -2.25s infinite forwards, fade 3s ease-in;
 }
 
 @keyframes move40 {
@@ -1005,7 +1030,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move41 15s ease-in -6.75s infinite forwards, fade 3s ease-in;
+    animation: move41 var(--move-dur) ease-in -6.75s infinite forwards, fade 3s ease-in;
 }
 
 @keyframes move41 {
@@ -1024,7 +1049,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move42 15s ease-in -6.75s infinite forwards, fade 3s ease-in;
+    animation: move42 var(--move-dur) ease-in -6.75s infinite forwards, fade 3s ease-in;
 }
 
 @keyframes move42 {
@@ -1043,7 +1068,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move43 15s ease-in -6.75s infinite forwards, fade 3s ease-in;
+    animation: move43 var(--move-dur) ease-in -6.75s infinite forwards, fade 3s ease-in;
 }
 
 @keyframes move43 {
@@ -1062,7 +1087,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move44 15s ease-in -6.75s infinite forwards, fade 3s ease-in;
+    animation: move44 var(--move-dur) ease-in -6.75s infinite forwards, fade 3s ease-in;
 }
 
 @keyframes move44 {
@@ -1081,7 +1106,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move45 15s ease-in -6.75s infinite forwards, fade 3s ease-in;
+    animation: move45 var(--move-dur) ease-in -6.75s infinite forwards, fade 3s ease-in;
 }
 
 @keyframes move45 {
@@ -1100,7 +1125,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move46 15s ease-in -6.75s infinite forwards, fade 3s ease-in;
+    animation: move46 var(--move-dur) ease-in -6.75s infinite forwards, fade 3s ease-in;
 }
 
 @keyframes move46 {
@@ -1119,26 +1144,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move46 15s ease-in -2.25s infinite forwards, fade 3s ease-in;
-}
-
-@keyframes move46 {
-    0% {
-        transform: scale(0.0) translateX(0px) translateY(0px) translateZ(0px);
-    }
-
-    100% {
-        transform: scale(1.2) translateX(-250px) translateY(-650px) translateZ(0px);
-    }
-}
-
-.move47 {
-    position: absolute;
-    height: 50px;
-    width: 50px;
-    margin-left: 50%;
-    margin-top: 23%;
-    animation: move47 15s ease-in -2.25s infinite forwards, fade 3s ease-in;
+    animation: move47 var(--move-dur) ease-in -2.25s infinite forwards, fade 3s ease-in;
 }
 
 @keyframes move47 {
@@ -1157,7 +1163,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move48 15s ease-in -2.25s infinite forwards, fade 3s ease-in;
+    animation: move48 var(--move-dur) ease-in -2.25s infinite forwards, fade 3s ease-in;
 }
 
 
@@ -1177,7 +1183,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move49 15s ease-in -6.25s infinite forwards, fade 3s ease-in;
+    animation: move49 var(--move-dur) ease-in -6.25s infinite forwards, fade 3s ease-in;
 }
 
 
@@ -1198,7 +1204,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move50 15s ease-in -3.25s infinite forwards, fade 3s ease-in;
+    animation: move50 var(--move-dur) ease-in -3.25s infinite forwards, fade 3s ease-in;
 }
 
 @keyframes move50 {
@@ -1217,7 +1223,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move51 15s ease-in -7.75s infinite forwards, fade 3s ease-in;
+    animation: move51 var(--move-dur) ease-in -7.75s infinite forwards, fade 3s ease-in;
 }
 
 @keyframes move51 {
@@ -1236,7 +1242,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move52 15s ease-in -3.75s infinite forwards, fade 3s ease-in;
+    animation: move52 var(--move-dur) ease-in -3.75s infinite forwards, fade 3s ease-in;
 }
 
 @keyframes move52 {
@@ -1255,7 +1261,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move53 15s ease-in -7.75s infinite forwards, fade 3s ease-in;
+    animation: move53 var(--move-dur) ease-in -7.75s infinite forwards, fade 3s ease-in;
 }
 
 @keyframes move53 {
@@ -1274,7 +1280,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move54 15s ease-in -10s infinite forwards, fade 3s ease-in;
+    animation: move54 var(--move-dur) ease-in -10s infinite forwards, fade 3s ease-in;
 }
 
 @keyframes move54 {
@@ -1293,7 +1299,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move55 15s ease-in -3.75s infinite forwards, fade 3s ease-in;
+    animation: move55 var(--move-dur) ease-in -3.75s infinite forwards, fade 3s ease-in;
 }
 
 @keyframes move55 {
@@ -1312,7 +1318,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move56 15s ease-in -2.75s infinite forwards, fade 3s ease-in;
+    animation: move56 var(--move-dur) ease-in -2.75s infinite forwards, fade 3s ease-in;
 }
 
 @keyframes move56 {
@@ -1331,7 +1337,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move57 15s ease-in -2.25s infinite forwards, fade 3s ease-in;
+    animation: move57 var(--move-dur) ease-in -2.25s infinite forwards, fade 3s ease-in;
 }
 
 @keyframes move57 {
@@ -1350,7 +1356,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move58 15s ease-in -5.25s infinite forwards, fade 3s ease-in;
+    animation: move58 var(--move-dur) ease-in -5.25s infinite forwards, fade 3s ease-in;
 }
 
 @keyframes move58 {
@@ -1369,7 +1375,7 @@ body {
     width: 50px;
     margin-left: 50%;
     margin-top: 23%;
-    animation: move59 15s ease-in -7.25s infinite forwards, fade 3s ease-in;
+    animation: move59 var(--move-dur) ease-in -7.25s infinite forwards, fade 3s ease-in;
 }
 
 
@@ -1380,25 +1386,5 @@ body {
 
     100% {
         transform: scale(1.2) translateX(750px) translateY(-250px) translateZ(0px);
-    }
-}
-
-.move60 {
-    position: absolute;
-    height: 50px;
-    width: 50px;
-    margin-left: 50%;
-    margin-top: 23%;
-    animation: move60 15s ease-in -3.25s infinite forwards, fade 3s ease-in;
-}
-
-
-@keyframes move60 {
-    0% {
-        transform: scale(0.0) translateX(0px) translateY(0px) translateZ(0px);
-    }
-
-    100% {
-        transform: scale(1.2) translateX(300px) translateY(-240px) translateZ(0px);
     }
 }

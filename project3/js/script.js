@@ -2,6 +2,7 @@ let darkModeToggle = document.getElementById("darkModeToggle");
 let clockNumbers = document.querySelectorAll(".clock ul li");
 let body = document.body;
 let isDarkMode = false;
+let randomColor = "#FFFFFF";
 let colors = [
   "#FF0000",
   "#00FF00",
@@ -62,23 +63,43 @@ darkModeToggle.addEventListener("click", function () {
 });
 
 // 시계 숫자 생성 함수
-function drawWord() {
+function drawWord(num) {
   // 고정적으로 60개의 숫자 문자를 표시합니다.
   // move1~move60과 같은 css 클래스가 적용돼있기 때문에 숫자만 늘리면 적용되지 않습니다.
-  for (let i = 1; i <= 60; i++) {
-    let div = document.createElement("div"); // div 요소 생성
-    div.classList.add("move" + i); // 클래스 추가
-    let label = document.createElement("label"); // label 요소 생성
-    label.classList.add("text-number"); // 클래스 추가
-    label.textContent = i; // 숫자 텍스트 설정
-    div.appendChild(label); // div에 label 추가
 
-    document.body.appendChild(div); // body에 div 추가
+  let div = document.createElement("div"); // div 요소 생성
+  div.classList.add("move" + num); // 클래스 추가
+  let label = document.createElement("label"); // label 요소 생성
+  label.classList.add("text-number"); // 클래스 추가
+  label.style.color = randomColor;
+  label.textContent = num; // 숫자 텍스트 설정
+  div.appendChild(label); // div에 label 추가
+
+  document.body.appendChild(div); // body에 div 추가
+
+  // 초가 흘러감에따라 일부 숫자는 제거함
+  removeDivs(num);
+}
+
+function removeDivs(num) {
+  // 대략 5~10초 이전 숫자는 제거함
+  // 최소 제거 대상 초 계산
+  let minRemovableSecond = (num - 10 + 60) % 60;
+  // 최대 제거 대상 초 계산
+  let maxRemovableSecond = (num - 5 + 60) % 60;
+
+  // 제거할 대상 div를 가져옵니다.
+  for (let i = minRemovableSecond; i <= maxRemovableSecond; i++) {
+      // 클래스명을 가진 div 요소를 찾습니다.
+      let elementToRemove = document.querySelector(".move" + i);
+      // 요소가 존재하면 제거합니다.
+      if (elementToRemove) {
+          elementToRemove.remove();
+      }
   }
 }
 
 window.onload = function () {
-  drawWord(); // 시계 숫자 생성 함수 호출
   let hourHand = document.querySelector(".hourHand"); // 시침 요소
   let minuteHand = document.querySelector(".minuteHand"); // 분침 요소
   let secondHand = document.querySelector(".secondHand"); // 초침 요소
@@ -113,10 +134,11 @@ window.onload = function () {
       "</small>" +
       "</span>";
 
-    let textNumbers = document.querySelectorAll(".text-number");
-    textNumbers.forEach(function (textNumber) {
-      textNumber.textContent = second;
-    });
+    drawWord(second); // 시계 숫자 생성 함수 호출
+    // let textNumbers = document.querySelectorAll(".text-number");
+    // textNumbers.forEach(function (textNumber) {
+    //   textNumber.textContent = second;
+    // });
   }
 
   // 1초마다 시계 업데이트 함수 호출
@@ -126,7 +148,7 @@ window.onload = function () {
  // 문자 색상 변경 함수
 function changeColor() {
   let randomIndex = Math.floor(Math.random() * colors.length);
-  let randomColor = colors[randomIndex];
+  randomColor = colors[randomIndex];
 
   // drawWord() 함수로 생성된 div 하위에 text-number 클래스를 선택해 색상 변경
   let textNumbers = document.querySelectorAll(".text-number");
