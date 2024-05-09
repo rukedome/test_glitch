@@ -77,25 +77,18 @@ function drawWord(num) {
 
   document.body.appendChild(div); // body에 div 추가
 
-  // 초가 흘러감에따라 일부 숫자는 제거함
-  removeDivs(num);
+  // 초가 흘러감에따라 일부 숫자는 제거함 3초 이후에 제거
+  setTimeout(removeDivs, 3000, num);
 }
 
 function removeDivs(num) {
-  // 대략 5~10초 이전 숫자는 제거함
-  // 최소 제거 대상 초 계산
-  let minRemovableSecond = (num - 10 + 60) % 60;
-  // 최대 제거 대상 초 계산
-  let maxRemovableSecond = (num - 5 + 60) % 60;
-
-  // 제거할 대상 div를 가져옵니다.
-  for (let i = minRemovableSecond; i <= maxRemovableSecond; i++) {
-      // 클래스명을 가진 div 요소를 찾습니다.
-      let elementToRemove = document.querySelector(".move" + i);
-      // 요소가 존재하면 제거합니다.
-      if (elementToRemove) {
-          elementToRemove.remove();
-      }
+  console.log(num);
+  console.log(new Date());
+  // 클래스명을 가진 div 요소를 찾습니다.
+  let elementToRemove = document.querySelector(".move" + num);
+  // 요소가 존재하면 제거합니다.
+  if (elementToRemove) {
+      elementToRemove.remove();
   }
 }
 
